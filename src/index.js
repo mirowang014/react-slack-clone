@@ -222,7 +222,7 @@ class View extends React.Component {
     'Notification' in window && Notification.requestPermission()
     existingUser
       ? ChatManager(this, JSON.parse(existingUser))
-      : fetch('https://chatkit-demo-server.herokuapp.com/auth', {
+      : fetch('https://chatroomtest123456.herokuapp.com/auth', {
           method: 'POST',
           body: JSON.stringify({ code: authCode }),
         })
@@ -308,7 +308,7 @@ const existingUser = window.localStorage.getItem('chatkit-user')
 const githubAuthRedirect = () => {
   const client = '20cdd317000f92af12fe'
   const url = 'https://github.com/login/oauth/authorize'
-  const server = 'https://chatkit-demo-server.herokuapp.com'
+  const server = 'https://chatroomtest123456.herokuapp.com/'
   const redirect = `${server}/success?url=${window.location.href.split('?')[0]}`
   window.location = `${url}?scope=user:email&client_id=${client}&redirect_uri=${redirect}`
 }
