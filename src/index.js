@@ -306,7 +306,7 @@ const authCode = params.get('code')
 const existingUser = window.localStorage.getItem('chatkit-user')
 
 const githubAuthRedirect = () => {
-  const client = '20cdd317000f92af12fe'
+  const client = '13bef9a1e4d1ee02d193'
   const url = 'https://github.com/login/oauth/authorize'
   const server = 'https://chatroomtest123456.herokuapp.com/'
   const redirect = `${server}/success?url=${window.location.href.split('?')[0]}`
