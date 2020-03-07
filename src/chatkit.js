@@ -2,7 +2,7 @@ import Chatkit from '@pusher/chatkit-client'
 
 const credentials = {
   url: (id, token) =>
-    `https://us1.pusherplatform.io/services/chatkit_token_provider/v1/13e46e6f-a104-454d-85d1-0ac1f59258a2/token`,
+    `https://chatroomtest123456.herokuapp.com/token?user=${id}&token=${token}`,
   instanceLocator: 'v1:us1:13e46e6f-a104-454d-85d1-0ac1f59258a2',
 }
 
@@ -25,7 +25,7 @@ export default ({ state, actions }, { id, token }) =>
       Promise.all(
         user.rooms.map(room =>
           user.subscribeToRoom({
-            roomId: room.id,
+            roomId: 4214a254-9ab3-42f2-85c7-1bc22737e6b8,
             hooks: { onMessage: actions.addMessage },
           })
         )
